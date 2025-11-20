@@ -1,1 +1,171 @@
-<p>Hello World</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>EdLearn — Learn & Grow</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="brand">EdLearn</div>
+			<nav class="main-nav">
+				<a href="#home">Home</a>
+				<a href="#instructors">Instructors</a>
+				<a href="#courses">Courses</a>
+				<a href="#incoming">Incoming Courses</a>
+				<a href="#faq">FAQ</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="actions">
+				<button id="themeToggle" class="icon-btn">🌙</button>
+				<button id="loginBtn" class="primary">Login</button>
+			</div>
+		</header>
+
+		<main>
+			<section id="home" class="hero">
+				<div class="hero-left">
+					<h1>Empower your future with practical skills</h1>
+					<p>Top instructors, project-based courses, and real student success stories.</p>
+					<div class="hero-cta">
+						<button id="signupCta" class="primary">Create Account</button>
+						<a href="#courses" class="ghost">Browse Courses</a>
+					</div>
+				</div>
+				<div class="hero-right">
+					<div class="stats">
+						<div class="stat">
+							<div class="num" id="studentsCount">12.5k</div>
+							<div class="label">Students</div>
+						</div>
+						<div class="stat">
+							<div class="num">320</div>
+							<div class="label">Courses</div>
+						</div>
+						<div class="stat">
+							<div class="num">95%</div>
+							<div class="label">Success rate</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="achievements" class="achievements">
+				<h2>Student Achievements</h2>
+				<div class="achievement-list">
+					<article class="achievement">
+						<h3>Full-Stack Bootcamp</h3>
+						<p>Average salary hike: 40% — 200+ hired by top companies.</p>
+					</article>
+					<article class="achievement">
+						<h3>Data Science Program</h3>
+						<p>Placements with leading analytics teams and startups.</p>
+					</article>
+					<article class="achievement">
+						<h3>UI/UX Design</h3>
+						<p>Designers building portfolio-ready apps and products.</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="success-stories" class="stories">
+				<h2>Success Stories</h2>
+				<div class="stories-grid">
+					<div class="story">
+						<p class="quote">"I landed my dream job after the Full-Stack course."</p>
+						<div class="who">— Aisha K., Frontend Engineer</div>
+					</div>
+					<div class="story">
+						<p class="quote">"The projects prepared me for real-world engineering."</p>
+						<div class="who">— Mark P., Data Scientist</div>
+					</div>
+					<div class="story">
+						<p class="quote">"Instructors gave actionable feedback every week."</p>
+						<div class="who">— Nina R., Product Designer</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="courses" class="featured">
+				<h2>Famous Courses</h2>
+				<div class="slider" id="courseSlider">
+					<button class="slider-btn prev" aria-label="Previous">‹</button>
+					<div class="slides">
+						<div class="slide">
+							<img src="https://via.placeholder.com/520x260?text=Full-Stack" alt="Full-Stack" />
+							<div class="slide-caption">
+								<h3>Full-Stack Web Development</h3>
+								<p>Build production-ready web apps with modern tooling.</p>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="https://via.placeholder.com/520x260?text=Data+Science" alt="Data Science" />
+							<div class="slide-caption">
+								<h3>Data Science & ML</h3>
+								<p>From data cleaning to building models and deployments.</p>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="https://via.placeholder.com/520x260?text=UI+UX" alt="UI UX" />
+							<div class="slide-caption">
+								<h3>UI/UX Design</h3>
+								<p>Create delightful user experiences and portfolios.</p>
+							</div>
+						</div>
+					</div>
+					<button class="slider-btn next" aria-label="Next">›</button>
+				</div>
+			</section>
+		</main>
+
+		<!-- Login / Create Account Modal -->
+		<div id="authModal" class="modal" aria-hidden="true">
+			<div class="modal-content">
+				<button class="close" id="closeModal">✕</button>
+				<div class="auth-tabs">
+					<button id="tabLogin" class="tab active">Login</button>
+					<button id="tabCreate" class="tab">Create Account</button>
+				</div>
+
+				<form id="loginForm" class="auth-form">
+					<label>Email
+						<input type="email" id="loginEmail" required />
+					</label>
+					<label>Password
+						<input type="password" id="loginPassword" required minlength="6" />
+					</label>
+					<button type="submit" class="primary">Login</button>
+				</form>
+
+				<form id="createForm" class="auth-form hidden">
+					<label>Name
+						<input type="text" id="createName" required />
+					</label>
+					<label>Phone
+						<input type="tel" id="createPhone" />
+					</label>
+					<label>Address
+						<input type="text" id="createAddress" />
+					</label>
+					<label>Email
+						<input type="email" id="createEmail" required />
+					</label>
+					<label>Password
+						<input type="password" id="createPassword" required minlength="6" />
+					</label>
+					<button type="submit" class="primary">Create Account</button>
+				</form>
+
+				<div id="authMessage" class="auth-message" role="status"></div>
+			</div>
+		</div>
+
+		<footer class="site-footer">
+			<div>© EdLearn — All rights reserved</div>
+			<div class="footer-links"><a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></div>
+		</footer>
+
+		<script src="app.js" defer></script>
+	</body>
+</html>
