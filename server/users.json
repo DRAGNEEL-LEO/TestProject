@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": 1763619880053,
+    "name": "asad",
+    "email": "abcd1234@gmail.com",
+    "phone": "1234",
+    "address": "zaman mansion",
+    "passwordHash": "$2a$10$QFy1gYMHYfPRIq2zpl8HWOBS3Lm236.spn2eIFm668fFkDxZ81t1y",
+    "created": "2025-11-20T06:24:40.053Z"
+  }
+]

@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Serve frontend static files from parent directory (TestProject)
+const clientDir = path.join(__dirname, '..');
+app.use(express.static(clientDir));
+
 const DATA_FILE = path.join(__dirname, 'users.json');
 
 function readUsers(){
